@@ -19,20 +19,20 @@ jobs:
       - name: Get version from plugin file
         id: get_version
         run: |
-          VERSION=$(grep -m 1 "Version:" wp-time-progress.php | awk -F': ' '{print $2}' | tr -d '\r')
+          VERSION=$(grep -m 1 "Version:" time-progress.php | awk -F': ' '{print $2}' | tr -d '\r')
           echo "version=${VERSION}" >> $GITHUB_OUTPUT
 
       - name: Create plugin archive
         run: |
-          mkdir wp-time-progress
-          cp -r css js languages wp-time-progress.php README.md LICENSE wp-time-progress/
-          zip -r wp-time-progress.zip wp-time-progress
+          mkdir time-progress
+          cp -r css js languages time-progress.php README.md LICENSE time-progress/
+          zip -r time-progress.zip time-progress
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: wp-time-progress.zip
+          files: time-progress.zip
           tag_name: v${{ steps.get_version.outputs.version }}
           name: Release v${{ steps.get_version.outputs.version }}
           draft: false

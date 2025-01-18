@@ -427,10 +427,17 @@ class Time_Progress_Plugin {
             true
         );
 
+        // Add debug information
+        $debug_info = array(
+            'options' => $this->options,
+            'debug' => true,
+            'version' => TIME_PROGRESS_VERSION
+        );
+
         wp_localize_script(
             'time-progress-script',
             'timeProgressSettings',
-            array('options' => $this->options)
+            $debug_info
         );
 
         wp_enqueue_style(

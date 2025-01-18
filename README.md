@@ -1,10 +1,10 @@
-# WP Time Progress
+# Time Progress
 
 A beautiful and customizable WordPress plugin that displays real-time progress information for day, month, quarter, and year with live-updating circular progress indicators.
 
 ## Description
 
-WP Time Progress is a modern WordPress plugin that shows your visitors how much time has passed and remains in various time periods. It features beautiful circular progress indicators that update in real-time and can be fully customized through an intuitive WordPress admin interface.
+Time Progress is a modern WordPress plugin that shows your visitors how much time has passed and remains in various time periods. It features beautiful circular progress indicators that update in real-time and can be fully customized through an intuitive WordPress admin interface.
 
 ## Features
 
@@ -28,18 +28,18 @@ WP Time Progress is a modern WordPress plugin that shows your visitors how much 
 
 ## Installation
 
-1. Upload the `wp-time-progress` folder to your `/wp-content/plugins/` directory
+1. Upload the `time-progress` folder to your `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to 'Settings > WP Time Progress' in your WordPress admin menu to customize settings
-4. Use the shortcode `[wp-time-progress]` in your posts, pages, or widgets
+3. Go to 'Settings > Time Progress' in your WordPress admin menu to customize settings
+4. Use the shortcode `[time_progress]` in your posts, pages, or widgets
 
 ## Usage
 
-Simply place the shortcode `[wp-time-progress]` wherever you want the time progress information to appear. The plugin will automatically display the progress indicators based on your settings.
+Simply place the shortcode `[time_progress]` wherever you want the time progress information to appear. The plugin will automatically display the progress indicators based on your settings.
 
 ## Customization
 
-You can customize every aspect of the display through the WP Time Progress settings page in your WordPress admin panel:
+You can customize every aspect of the display through the Time Progress settings page in your WordPress admin panel:
 
 - Toggle different time periods on/off
 - Customize colors for:

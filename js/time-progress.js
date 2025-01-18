@@ -13,8 +13,16 @@ function TimeProgress() {
         const container = document.getElementById('time-progress-container');
         if (!container) return;
 
-        // Get settings from WordPress
+        // Get settings from WordPress and log them
         const settings = window.timeProgressSettings?.options || {};
+        console.log('Time Progress Settings:', settings);
+        
+        // Log when styles are being applied
+        console.log('Applying styles:', {
+            color: settings.text_color,
+            fontSize: `${settings.font_size}px`,
+            fontFamily: settings.font_family
+        });
         
         let parts = [];
         let wheels = [];

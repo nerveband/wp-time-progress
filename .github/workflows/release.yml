@@ -1,0 +1,45 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get version from plugin file
+        id: get_version
+        run: |
+          VERSION=$(grep -m 1 "Version:" wp-time-progress.php | awk -F': ' '{print $2}' | tr -d '\r')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Create plugin archive
+        run: |
+          mkdir wp-time-progress
+          cp -r css js languages wp-time-progress.php README.md LICENSE wp-time-progress/
+          zip -r wp-time-progress.zip wp-time-progress
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          release_name: Release v${{ steps.get_version.outputs.version }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./wp-time-progress.zip
+          asset_name: wp-time-progress.zip
+          asset_content_type: application/zip 

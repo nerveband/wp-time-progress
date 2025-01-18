@@ -40,4 +40,7 @@ wp-content/backups/
 
 # Environment files
 .env
-.env.* 
+.env.*
+
+# Cursor specific
+.specstory/ 

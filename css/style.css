@@ -1,0 +1,110 @@
+/* time-progress/css/style.css */
+
+/**
+ * Time Progress Frontend Styles
+ * Author: Ashraf Ali
+ * Website: https://ashrafali.net
+ * License: MIT
+ */
+
+.time-progress {
+    margin: 1.5em 0;
+    padding: 1em;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .time-progress {
+        color: #f0f0f0;
+    }
+}
+
+/* Responsive text sizing */
+@media screen and (max-width: 480px) {
+    .time-progress {
+        font-size: 0.9em;
+        padding: 0.8em;
+    }
+}
+
+/* Print styles */
+@media print {
+    .time-progress {
+        color: #000 !important;
+        padding: 0;
+    }
+}
+
+#time-progress-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.time-progress-wheels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.progress-wheel {
+    text-align: center;
+}
+
+.progress-wheel svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.progress-wheel-bg {
+    transition: stroke 0.3s;
+}
+
+.progress-wheel-progress {
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress-wheel-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.progress-wheel-label {
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+.time-progress-text {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Text elements styling */
+.wp-time-progress-date {
+    color: var(--date-color, #007bff);
+    font-weight: 500;
+}
+
+.wp-time-progress-time {
+    color: var(--time-color, #28a745);
+    font-family: monospace;
+}
+
+.wp-time-progress-timezone {
+    color: var(--timezone-color, #6c757d);
+    font-style: italic;
+}
+
+.wp-time-progress-days {
+    color: var(--days-color, #dc3545);
+    font-weight: 500;
+}
+
+.wp-time-progress-percent {
+    color: var(--percent-color, #17a2b8);
+    font-weight: 500;
+}

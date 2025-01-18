@@ -1,0 +1,219 @@
+/* time-progress/css/admin.css */
+
+/**
+ * Time Progress Admin Styles
+ * Author: Ashraf Ali
+ * Website: https://ashrafali.net
+ * License: MIT
+ */
+
+/* Main container styling */
+.time-progress-admin-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Settings sections */
+.settings-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.settings-section h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    color: #1d2327;
+}
+
+/* Settings panel */
+.time-progress-settings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Preview section */
+.time-progress-preview {
+    grid-column: 1 / -1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.time-progress-preview h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.preview-container {
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+/* Shortcode info styling */
+.shortcode-info {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.shortcode-info code {
+    background: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+/* Progress wheels styling */
+.time-progress-wheels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.progress-wheel {
+    text-align: center;
+}
+
+.progress-wheel svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.progress-wheel-bg {
+    transition: stroke 0.3s;
+}
+
+.progress-wheel-progress {
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress-wheel-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.progress-wheel-label {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #666;
+}
+
+.time-progress-text {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Form fields styling */
+.form-table {
+    margin: 0;
+}
+
+.form-table th {
+    padding: 15px 10px 15px 0;
+    width: auto;
+}
+
+.form-table td {
+    padding: 12px 10px;
+}
+
+/* Input fields styling */
+input[type="color"] {
+    width: 60px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+}
+
+input[type="number"] {
+    width: 80px;
+}
+
+select#font_family {
+    min-width: 200px;
+}
+
+/* Author credit */
+.time-progress-author {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-progress-author a {
+    color: #2271b1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.time-progress-author a:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+    .time-progress-admin-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .time-progress-settings {
+        grid-template-columns: 1fr;
+    }
+
+    .form-table th {
+        padding: 10px 0;
+    }
+
+    .preview-container {
+        padding: 1rem;
+    }
+}
+
+/* WordPress dark mode compatibility */
+@media screen and (prefers-color-scheme: dark) {
+    body.admin-color-modern .settings-section,
+    body.admin-color-modern .time-progress-preview,
+    body.admin-color-modern .time-progress-author {
+        background: #1e1e1e;
+        border-color: #1e1e1e;
+    }
+
+    body.admin-color-modern .preview-container {
+        background: #2c2c2c;
+    }
+
+    body.admin-color-modern .shortcode-info {
+        background: #2c2c2c;
+    }
+
+    body.admin-color-modern .shortcode-info code {
+        background: #1e1e1e;
+        border-color: #2c2c2c;
+    }
+}
